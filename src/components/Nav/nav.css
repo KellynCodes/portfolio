@@ -1,0 +1,223 @@
+.nav_container {
+  width: 85%;
+  height: 5rem;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlinks {
+  width: 70%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlinks .links {
+  width: 60%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+
+.navlinks .right_links {
+  width: 38%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.navbar .logo {
+  width: 14rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar > a {
+  font-size: 2rem;
+  display: block;
+  margin-right: 1.5rem;
+  color: var(--black_color);
+  transition: 400ms;
+}
+
+.navbar > a:hover {
+  color: var(--main_color);
+}
+
+.navbar .logo h1 {
+  background-color: var(--black_color);
+  background-image: linear-gradient(
+    to left,
+    var(--black_color) 0%,
+    var(--hover_color),
+    var(--main_color) 100%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: var(--font_Proxima-Nova);
+}
+
+.navbar .logo h1 i {
+  color: var(--main_color);
+}
+
+.navbar .navlinks .links li {
+  list-style-type: none;
+}
+
+.navbar .navlinks .links a {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--black_color);
+  width: auto;
+  height: auto;
+  border-bottom: 0px solid var(--main_color);
+  padding: 0.3rem;
+  transition: all 400ms ease-in-out;
+}
+
+.navbar .navlinks li:hover a {
+  border-bottom: 4px solid var(--main_color);
+}
+
+.navbar .navlinks li.active a {
+  border-bottom: 4px solid var(--main_color);
+}
+
+.navbar .navlinks .right_links a {
+  height: 3rem;
+  width: 6rem;
+  text-align: center;
+  padding: 0.8rem;
+  text-decoration: none;
+  background-color: var(--main_color);
+  border-radius: 5px;
+  color: var(--white_color);
+  transition: 700ms;
+}
+
+.navbar .navlinks .right_links a::after {
+  opacity: 0;
+  pointer-events: none;
+  content: "Hire me on Upwork";
+  color: var(--main_color);
+  text-align: center;
+  background-color: var(--white_color);
+  border: 1px solid var(--main_color);
+  height: 1.5rem;
+  width: 10rem;
+  border-radius: 5px;
+  position: absolute;
+  right: 5%;
+  top: 14%;
+}
+
+.navbar .navlinks .right_links:hover a::after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navbar .navlinks .right_links a:hover {
+  background-color: var(--hover_color);
+}
+
+@media screen and (max-width: 1100px) {
+  .nav_container {
+    width: 95%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav_container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .navbar .navlinks {
+    width: 85%;
+    position: fixed;
+    bottom: 2%;
+    margin: 0 auto;
+    background: #ffffffa6;
+    border: 1px solid var(--main_color);
+    z-index: 2000;
+    left: 6%;
+    padding: 1.5rem;
+    padding-left: 2rem;
+    border-radius: 15px;
+  }
+
+  .navbar .navlinks .links a {
+    padding: 0.6rem;
+    background: var(--main_color);
+    color: var(--white_color);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav_container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .navbar .navlinks {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 4.5rem;
+    left: 0;
+    justify-content: center;
+  }
+
+  .navlinks .links {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+  }
+
+  .navbar .navlinks .links a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .navbar .logo {
+    width: 48%;
+    height: 100%;
+    margin-left: 1.5rem;
+  }
+
+  .navbar .navlinks .right_links {
+    display: none;
+  }
+}
