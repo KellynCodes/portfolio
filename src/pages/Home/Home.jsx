@@ -11,7 +11,7 @@ function Home() {
   }, []);
   return (
     <div id="home" className="home">
-      <div data-aos="flip-right" class="home_left">
+      <div data-aos="flip-right" className="home_left">
         <div className="about">
           <div className="me">
             <h3>Hey! I am</h3>
@@ -25,7 +25,7 @@ function Home() {
               I help your business succeed! by creating trusted softwares to
               manage your business
             </h5>
-            <i>Full stack Engineer =></i>
+            <i>Full stack Engineer =&gt;</i>
             <a href="#TechStack"> Tech Stacks</a>
           </div>
 

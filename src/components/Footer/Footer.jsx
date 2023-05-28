@@ -14,18 +14,6 @@ function Footer() {
     <>
       <div className="footer_container">
         <div className="footer">
-          <div className="about_me">
-            <div className="about_me_h4">
-              <h4>About Me</h4>
-            </div>
-            <p>
-              Software Engineer with over three years of professional learning
-              and working experience. Skilled in C#/.NET, NestJs Angular, NextJs
-              and PHP with professional knowledge of OOP, Architectural
-              Principles and Design, Resource management and Project Planning.
-            </p>
-          </div>
-
           <div className="socials">
             <div className="get_in_touch">
               <h4>Get in touch</h4>

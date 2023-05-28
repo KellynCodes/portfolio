@@ -95,16 +95,25 @@ li {
   margin: 0 auto;
 }
 
-.section_page {
-  padding-top: 1em;
-  padding-bottom: 1em;
+.resume .section_page {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.resume .skills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2px;
+  margin-top: -2rem;
 }
 
 .resume #wrapper_hero {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 4em;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -145,6 +154,12 @@ li {
   border: 3px solid var(--black_color);
 }
 
+.resume .profile {
+  width: 70%;
+  margin: auto;
+  margin-top: 1.2rem;
+}
+
 .resume #socials_list {
   display: flex;
   justify-content: space-evenly;
@@ -166,15 +181,6 @@ li {
 .resume #socials_list a:hover {
   text-decoration: underline;
 }
-
-.skills {
-  display: flex !important;
-  align-items: center !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  gap: 4px !important;
-}
-
 .resume .qualification_list {
   display: flex;
   flex-wrap: wrap;
@@ -291,6 +297,10 @@ li {
     font-size: 1rem;
   }
 
+  .resume .skills {
+    margin-top: 0;
+  }
+
   .skills div .skill > ul {
     width: 15rem;
     display: grid;
@@ -300,6 +310,7 @@ li {
   .skills div .skill {
     width: 15rem;
     display: grid;
+    margin-top: 1rem;
   }
 
   .skills > div h2 {
@@ -313,6 +324,15 @@ li {
     margin: 2rem 0 0 0;
   }
 
+  .resume #wrapper_hero div {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .resume #bio,
   #email {
     text-align: center;
@@ -322,8 +342,20 @@ li {
     text-align: center;
   }
 
+  .resume #email {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.1rem 0.2rem;
+  }
+
   .resume #wrapper_hero h2 {
     font-size: 2rem;
+  }
+
+  .resume .profile {
+    width: 90%;
+    margin: auto;
+    margin-top: 1.2rem;
   }
 
   .resume #socials_list {

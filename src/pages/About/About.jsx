@@ -29,6 +29,14 @@ const About = () => {
                 </a>
               </div>
             </div>
+            <div className="profile">
+              <p>
+                Software Engineer with over three years of professional learning
+                and working experience. Skilled in C#/.NET, NestJs Angular,
+                NextJs and PHP with professional knowledge of OOP, Architectural
+                Principles and Design, Resource management and Project Planning.
+              </p>
+            </div>
 
             <section className="section_page">
               <div id="socials_list">
@@ -99,7 +107,7 @@ const About = () => {
               </div>
             </section>
 
-            <section className="section_page">
+            <section className="section_page" id="TechStack">
               <h2 className="tech_stack">Tech Stack</h2>
 
               <div id="wrapper_techstack_items">

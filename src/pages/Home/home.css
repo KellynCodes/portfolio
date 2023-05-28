@@ -18,8 +18,8 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  top: 72.5%;
-  left: 8.7%;
+  top: 63%;
+  left: 35%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +115,7 @@
   height: fit-content;
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: flex-start;
 }
 
 .home .about .my_work ul {
@@ -126,7 +126,6 @@
   justify-content: space-evenly;
   flex-direction: column;
   background-color: var(--background_color);
-  margin: auto;
   border: 2.5px solid var(--black_color);
   border-radius: 10px;
   padding: 1rem;
