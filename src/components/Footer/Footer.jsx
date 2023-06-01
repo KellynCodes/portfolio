@@ -42,7 +42,7 @@ function Footer() {
               </a>
 
               <a
-                href="https://discord.com/@kellyncodes"
+                href="https://discord.com/users/kellyncodes#8004"
                 rel="noreferrer"
                 target="_blank"
               >
