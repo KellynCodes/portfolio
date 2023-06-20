@@ -3,11 +3,11 @@ import "./project.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import SushiProject from "../../assets/sushi-wadashi.jpg";
 import OrieOba from "../../assets/portfolio.png";
-import EstHub from "../../assets/enugutechhub.png";
+import Tetherex from "../../assets/tetherex.JPG";
 import Fricol from "../../assets/banking-system.png";
 import Meals from "../../assets/bezao.JPG";
+import emaldaUnizike from "../../assets/emaldaunizik.jpg";
 import FetchGitUsers from "../../assets/github-users.JPG";
 
 function Project() {
@@ -20,6 +20,54 @@ function Project() {
         <h1>MY PROJECTS</h1>
       </div>
       <div className="projects">
+        <div className="project" data-aos="fade-left">
+          <div className="project_img">
+            <img src={emaldaUnizike} alt="Project img" />
+            <h5>Unizike Hostel Management System</h5>
+          </div>
+
+          <div className="button">
+            <a
+              href="https://elmadaunizikhostels.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Private Repo
+            </a>
+            <a
+              href="https://elmadaunizikhostels.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Site
+            </a>
+          </div>
+        </div>
+
+        <div className="project" data-aos="fade-left">
+          <div className="project_img">
+            <img src={Tetherex} alt="Project img" />
+            <h5>Investement App</h5>
+          </div>
+
+          <div className="button">
+            <a
+              href="https://github.com/KellynCodes?tab=repositories&q=tetherex&type=&language=&sort="
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
+            <a
+              href="https://tetherex.netlify.app"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Site
+            </a>
+          </div>
+        </div>
+
         <div className="project" data-aos="fade-down">
           <div className="project_img">
             <img src={Meals} alt="Project img" />
@@ -28,14 +76,14 @@ function Project() {
 
           <div className="button">
             <a
-              href="https://github.com/KellynCodes/foodorderui"
+              href="https://github.com/KellynCodes?tab=repositories&q=meals&type=&language=&sort="
               target="_blank"
               rel="noreferrer"
             >
               Github
             </a>
             <a
-              href="https://foodorderr.netlify.app"
+              href="https://kelly-meals.netlify.app"
               target="_blank"
               rel="noreferrer"
             >
@@ -89,30 +137,6 @@ function Project() {
           </div>
         </div>
 
-        <div className="project" data-aos="fade-left">
-          <div className="project_img">
-            <img src={EstHub} alt="Project img" />
-            <h5>Digital Training Website</h5>
-          </div>
-
-          <div className="button">
-            <a
-              href="https://github.com/KellynCodes/Admin-dashboard-profile-groupchat-web-app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </a>
-            <a
-              href="https://esthub.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit Site
-            </a>
-          </div>
-        </div>
-
         <div className="project" data-aos="fade-up">
           <div className="project_img">
             <img src={FetchGitUsers} alt="Project img" />
@@ -123,30 +147,6 @@ function Project() {
             <a href="https://github.com/KellynCodes/search_git_users">Github</a>
             <a
               href="https://kellygithubusers.netlify.app"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit Site
-            </a>
-          </div>
-        </div>
-
-        <div className="project" data-aos="fade-left">
-          <div className="project_img">
-            <img src={SushiProject} alt="Project img" />
-            <h5>Bussiness Website | JS</h5>
-          </div>
-
-          <div className="button">
-            <a
-              href="https://github.com/KellynCodes/simplebusinesssite"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Github
-            </a>
-            <a
-              href="https://bussiness-site.netlify.app"
               target="_blank"
               rel="noreferrer"
             >
