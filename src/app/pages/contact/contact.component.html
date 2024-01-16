@@ -1,0 +1,83 @@
+<div id="contact" class="contact_container">
+  <div class="header_text">
+    <h1>Contact Me</h1>
+  </div>
+  <div class="contact">
+    <div class="beautify_form" data-aos="flip-left" data-aos-delay="500">
+      <img src="assets/svg/form.svg" alt="Form_Image" />
+    </div>
+
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+      data-aos="flip-right"
+      data-aos-delay="700"
+    >
+      <div class="form_group">
+        <input
+          type="name"
+          name="name"
+          formControlName="name"
+          placeholder="Name"
+        />
+        <label for="name">Name</label>
+        @if( contactForm.get('name')?.touched &&
+        contactForm.get('name')?.hasError('required')){
+        <h6 class="text-red-500">Name is required.</h6>
+        }
+      </div>
+
+      <div class="form_group">
+        <input
+          type="number"
+          name="phone"
+          formControlName="phone"
+          placeholder="Phone(Optional)"
+        />
+        <label for="phone">Phone</label>
+        @if(contactForm.get('phone')?.touched &&
+        contactForm.get('phone')?.hasError('pattern')){
+        <h6 class="text-red-500">Invalid phone number format.</h6>
+        }
+      </div>
+
+      <div class="form_group">
+        <input
+          type="email"
+          formControlName="email"
+          name="email"
+          placeholder="Email"
+        />
+        <label for="email">Email</label>
+        @if( contactForm.get('email')?.touched &&
+        contactForm.get('email')?.hasError('required')){
+        <h6 class="text-red-500">Email is required.</h6>
+        }
+      </div>
+
+      <div class="message">
+        <textarea
+          placeholder="Enter Your Message Here"
+          formControlName="message"
+          name="message"
+        ></textarea>
+        <label for="message">Enter Your Message Here</label>
+        @if( contactForm.get('message')?.touched &&
+        contactForm.get('message')?.hasError('required')){
+        <h6>Message is required.</h6>
+        } @if(contactForm.get('message')?.touched &&
+        contactForm.get('message')?.hasError('minlength')){
+        <h6 class="text-red-500">
+          Message should be equal or greater than 150 characters.
+        </h6>
+        }
+      </div>
+
+      <div class="form_group">
+        <button type="submit" [disabled]="isSending()">
+          {{ isSending() ? "Sending..." : "Send Message" }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/@angular/cdk/overlay-prebuilt.css";
+@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main_color: #4297a0;
+  --black_color: #fffff0;
+  --white_color: #ffffff;
+  --hover_color: #357f84;
+  --background_color: #2f5061;
+  --border_color: #e9dede;
+  --font_Sofia: "Sofia", sans-serif;
+  --font_Proxima-Nova: "Proxima Nova", sans-serif;
+}
+
+body {
+  font-family: var(--font_Proxima-Nova);
+  overflow-x: hidden;
+  color: white !important;
+  background-color: var(--background_color);
+}
+
+
+.text-red-500{
+    color: red;
+}
+
+/* CSS Box Shadow Class */
+.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+}

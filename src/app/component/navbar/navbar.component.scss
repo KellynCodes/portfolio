@@ -1,0 +1,232 @@
+.nav_container {
+  height: 5rem;
+  margin: auto;
+  padding: 0.5rem 0;
+}
+
+.navbar .logo a {
+  font-size: 2rem;
+  display: block;
+  margin-right: 1.5rem;
+  color: var(--black_color);
+  transition: 400ms;
+}
+
+.navbar .github-icon, .navlinks .links #sm{
+  display: none
+}
+
+.navbar .logo a:hover {
+  color: var(--main_color);
+}
+
+.navbar {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlinks {
+  width: 70%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navlinks .links {
+  width: 60%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.5rem;
+}
+
+.navlinks .right_links {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .logo {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .logo h1 {
+  background-color: var(--black_color);
+  background-image: linear-gradient(
+    to left,
+    var(--black_color) 0%,
+    var(--hover_color),
+    var(--main_color) 100%
+  );
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: var(--font_Proxima-Nova);
+}
+
+.navbar .logo h1 i {
+  color: var(--main_color);
+}
+
+.navbar .navlinks .links li {
+  list-style-type: none;
+}
+
+.navbar .navlinks .links a {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--black_color);
+  width: auto;
+  height: auto;
+  border-bottom: 0px solid var(--main_color);
+  padding: 0.3rem;
+  transition: all 400ms ease-in-out;
+}
+
+.navbar .navlinks li:hover #lg {
+  border-bottom: 4px solid var(--main_color);
+}
+
+.navbar .navlinks li.active #lg {
+  border-bottom: 4px solid var(--main_color);
+}
+
+.navbar .navlinks .right_links a {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: var(--white_color);
+  transition: 500ms;
+}
+
+.navbar .navlinks .right_links a::after {
+  opacity: 0;
+  pointer-events: none;
+  content: "@KellynCodes";
+  color: var(--main_color);
+  text-align: center;
+  background-color: var(--white_color);
+  border: 1px solid var(--main_color);
+  height: 1.5rem;
+  width: 10rem;
+  border-radius: 5px;
+  position: absolute;
+  right: 5%;
+  top: 14%;
+}
+
+.navbar .navlinks .right_links:hover a::after {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media screen and (max-width: 800px) {
+  .nav_container {
+    width: 100%;
+    padding: 0;
+    background-color: red;;
+  }
+
+  .navbar .navlinks {
+    width: 85%;
+    position: fixed;
+    bottom: 0%;
+    margin: 0 auto;
+    border-top: 1px solid var(--main_color);
+    z-index: 2000;
+  }
+
+  .navbar .navlinks .links #lg {
+    padding: 0.6rem;
+    background: var(--main_color);
+    color: var(--white_color);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav_container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .navbar .navlinks {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 3rem;
+    justify-content: center;
+  }
+
+  .navlinks .links {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+  }
+  
+   .navbar .navlinks .links #lg{
+  display: none;
+
+  .navlinks .links li{
+       display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .navbar .navlinks .links #lg {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .navbar .navlinks .links li #sm ng-icon{
+    display: none;
+  }
+
+   .navbar .navlinks .links li #sm ng-icon{
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+  .navbar .logo {
+    width: 48%;
+    height: 100%;
+    margin-left: 1.5rem;
+  }
+
+      .navbar .github-icon{
+  display: block;
+}
+
+  .navbar .navlinks .right_links #last-child{
+    display: none;
+  }
+}

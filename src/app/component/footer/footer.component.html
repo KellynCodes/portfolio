@@ -1,0 +1,56 @@
+<div class="footer_container">
+  <div class="footer">
+    <div class="socials">
+      <div class="get_in_touch">
+        <h4>Get in touch</h4>
+      </div>
+      <ul>
+        <a
+          href="https://github.com/KellynCodes"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <ng-icon color="#2f5061" name="faBrandGithub" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/KellynCodes"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <ng-icon color="#2f5061" name="faBrandLinkedin" />
+        </a>
+        <a
+          href="https://twitter.com/kellyncodes"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <ng-icon color="#2f5061" name="faBrandXTwitter" />
+        </a>
+
+        <a
+          href="https://discord.com/users/kellyncodes#8004"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <ng-icon color="#2f5061" name="faBrandUpwork" />
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <a
+    href="#nav"
+    [class]="windowScroll() ? 'open_scroll_up' : 'close_scroll_up'"
+  >
+    <i class="fas fa-arrow-circle-up"></i>
+    <ng-icon color="#2f5061" name="faSolidCircleArrowUp" />
+  </a>
+</div>
+
+<div class="copyright">
+  <p>
+    CopyRight &copy;
+    <b class="footer_year"> {{ year }} </b> All right Reserved, Made by
+    <b class="footer_year">KellynCodes</b>
+  </p>
+</div>

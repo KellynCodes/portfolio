@@ -1,0 +1,62 @@
+<div id="home" class="home">
+  <div class="home_left" data-aos="flip-left" data-aos-delay="500">
+    <div class="about">
+      <div class="me">
+        <h3>Hey! I am</h3>
+        <h1>Kelly</h1>
+      </div>
+      <div class="software_engineer">
+        <h1>Software Engineer</h1>
+      </div>
+      <div class="capacity">
+        <h5>
+          I help your business succeed! by creating trusted softwares to manage
+          your business
+        </h5>
+        <i>Full stack Engineer =&gt;</i>
+        <a href="#TechStack"> Tech Stacks</a>
+      </div>
+
+      <div class="my_work">
+        <ul>
+          <h3>The kind of works I do</h3>
+          <div class="icon_container">
+            <div class="icons">
+              <ng-icon name="faSolidPen" />
+            </div>
+            <p>Project Planning</p>
+          </div>
+          <div class="icon_container">
+            <div class="icons">
+              <ng-icon name="faSolidLaptopCode" />
+            </div>
+            <p>Software Development</p>
+          </div>
+
+          <div class="icon_container">
+            <div class="icons">
+              <ng-icon name="faSolidLaptopCode" />
+            </div>
+            <p>Software Maintenance</p>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="home_right" data-aos="flip-right" data-aos-delay="600">
+    <img src="assets/svg/form.svg" alt="profile_image" />
+  </div>
+</div>
+
+<kelly-about />
+
+@defer {
+<kelly-projects />
+}@loading(minimum 500ms) {
+<blog-loader loadingText="Loading Project Gallery..." />
+}@error {
+<p class="text-red-500 font-bold bg-white z-50">Failed to load projects</p>
+}
+
+<kelly-contact />

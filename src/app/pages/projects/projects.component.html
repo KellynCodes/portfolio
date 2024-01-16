@@ -1,0 +1,57 @@
+<div id="project" class="project_page" data-aos="zoom-in">
+  <div class="header_text">
+    <h1>MY PROJECTS</h1>
+  </div>
+  <div class="projects">
+    <gallery
+      class="gallery"
+      id="PROJECT_GALLERY"
+      imageSize="cover"
+      [autoPlay]="true"
+      [playerInterval]="5000"
+    >
+      <ng-container *galleryImageDef="let item; let active = active">
+        <div *ngIf="active" class="project_desc shadow">
+          <p>
+            {{ item?.alt }}
+          </p>
+        </div>
+        <div class="button-and-tag-container">
+          <div class="tags">
+            @for (tag of item?.args?.tags; track $index) {
+            <span class=""># {{ tag }}</span>
+            }
+          </div>
+          <div class="button">
+            <a
+              href="{{ item?.args?.githubLink }}"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ng-icon color="#fff" size="3em" name="faBrandGithub" />
+            </a>
+            <a
+              href="{{ item?.args?.liveLink }}"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ng-icon color="#fff" size="3em" name="faSolidLink" />
+            </a>
+          </div>
+        </div>
+      </ng-container>
+      <div *galleryItemDef="let item; let type = type">
+        <a href="{{ item?.args?.liveLink }}">
+          <div *ngIf="type === 'image'">
+            <img [src]="item?.src" />
+          </div>
+          <div *ngIf="type === 'video'">
+            <video>
+              <source [src]="item?.src" />
+            </video>
+          </div>
+        </a>
+      </div>
+    </gallery>
+  </div>
+</div>
