@@ -197,8 +197,13 @@
     margin: 0 auto;
   }
 
-  .home .home_right {
-   display: none;
+  .home .home_right{
+    width: 98%;
+  }
+
+  .home .home_right img {
+    margin-top:0;
+    width: 100%;
   }
 
   .home .home_left .about {
@@ -232,8 +237,8 @@
   
   .home::before {
     left: unset;
-    right: 0%;
-    top: 55%;
+    right: 10%;
+    top: 60%;
   }
 
 

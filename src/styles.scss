@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -16,18 +17,45 @@
   --background_color: #2f5061;
   --border_color: #e9dede;
   --font_Sofia: "Sofia", sans-serif;
-
+}
 body {
   font-family: "Inter", sans-serif;
-};
   overflow-x: hidden;
   color: white !important;
   background-color: var(--background_color);
 }
 
+.text-red-500 {
+  position: absolute;
+  right: 3%;
+  bottom: 15%;
+  color: #a80c1b;
+  background-color: white;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  max-height: fit-content !important;
+}
 
-.text-red-500{
-    color: red;
+.text-red-message {
+  position: absolute;
+  right: 3%;
+  bottom: 2.5%;
+  color: #a80c1b;
+  background-color: white;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  max-height: fit-content !important;
+}
+
+@media (max-width: 600px) {
+  .text-red-500 {
+    right: 5%;
+  }
+  .text-red-message {
+    right: 5%;
+  }
 }
 
 .shadow {

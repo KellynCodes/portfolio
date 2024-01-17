@@ -11,19 +11,18 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
-.github-icon{
+.github-icon {
   display: none;
-  justify-content: flex-end;
+  justify-content: end;
   align-items: center;
   width: 48%;
   height: 100%;
 }
 
-.navlinks .links #sm{
-  display: none
+.navlinks .links #sm {
+  display: none;
 }
 
 .navbar .logo a:hover {
@@ -54,6 +53,14 @@
   align-items: center;
   justify-content: center;
 }
+
+  .right_links .lg{
+    display: inline-block;
+  }
+
+  .right_links .sm{
+    display: none;
+  }
 
 .navbar .logo {
   width: 15%;
@@ -87,16 +94,6 @@
   border-bottom: 4px solid var(--main_color);
 }
 
-.navbar .navlinks .right_links a {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  color: var(--white_color);
-  transition: 500ms;
-}
-
 .navbar .navlinks .right_links a::after {
   opacity: 0;
   pointer-events: none;
@@ -119,7 +116,7 @@
 }
 
 @media screen and (max-width: 1100px) {
-.navbar {
+  .navbar {
     width: 98%;
   }
 }
@@ -130,11 +127,9 @@
     padding: 0;
   }
 
-  .navbar{
+  .navbar {
     width: 100%;
   }
-
-
 }
 
 @media screen and (max-width: 600px) {
@@ -145,12 +140,16 @@
     overflow-x: hidden;
   }
 
-    .navbar .navlinks {
+    .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar .navlinks {
     width: 85%;
     position: fixed;
     bottom: 0%;
     margin: 0 auto;
-     padding: 0;
+    padding: 0;
     width: 100vw;
     height: 3rem;
     justify-content: center;
@@ -164,16 +163,22 @@
     color: var(--white_color);
   }
 
-  .navbar{
-    justify-content: space-between;
+  .right_links .lg{
+    display: none;
   }
 
-  .logo a img{
+  .right_links .sm{
+    display: inline-block;
+  }
+
+  .logo a img {
     width: 4rem;
     height: 4rem;
+    margin-left: 1rem;
   }
 
   .navlinks .links {
+    background-color: #ffffffbf;
     width: 100%;
     height: inherit;
     display: flex;
@@ -181,46 +186,31 @@
     justify-content: space-evenly;
     gap: 0.5rem;
   }
-  
-   .navbar .navlinks .links #lg{
-  display: none;
-   }
-  .navlinks .links li{
-       display: flex;
+
+  .navbar .navlinks .links #lg {
+    display: none;
+  }
+  .navlinks .links li {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     width: fit-content;
     height: fit-content;
   }
 
-  .navbar .navlinks .links #lg {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-
-  .navbar .navlinks .links li #sm ng-icon{
-    display: none;
-  }
-
-   .navbar .navlinks .links li #sm ng-icon{
+  .navbar .navlinks .links li #sm {
     display: inline-block;
     margin: 0;
-}
+  }
 
   .navbar .logo {
     width: 48%;
     height: 100%;
-  margin-left: 1rem;
-
   }
 
-      .navbar .github-icon{
-  display: flex;
-  margin-right: 2rem;
-
-}
-
-  .navbar .navlinks .right_links #last-child{
-    display: none;
+  .navbar .github-icon {
+    display: flex;
+    margin-right: 2rem;
+    background-color: #2f5061cd;
   }
 }

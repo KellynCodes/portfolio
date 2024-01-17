@@ -64,10 +64,10 @@
         <label for="message">Enter Your Message Here</label>
         @if( contactForm.get('message')?.touched &&
         contactForm.get('message')?.hasError('required')){
-        <h6>Message is required.</h6>
+        <h6 class="text-red-message">Message is required.</h6>
         } @if(contactForm.get('message')?.touched &&
         contactForm.get('message')?.hasError('minlength')){
-        <h6 class="text-red-500">
+        <h6 class="text-red-message">
           Message should be equal or greater than 150 characters.
         </h6>
         }

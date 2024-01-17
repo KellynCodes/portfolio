@@ -44,7 +44,7 @@
   font-family: var(--font_Proxima-Nova);
 }
 
-.project_desc{
+.project_desc {
   z-index: 999;
   top: 6%;
   position: absolute;
@@ -57,7 +57,7 @@
   padding: 0.5rem 1rem;
 }
 
-.project_desc p{
+.project_desc p {
   font-size: 1.2rem;
   text-align: center;
   font-weight: bold;
@@ -65,7 +65,7 @@
 }
 
 .projects {
-  width: 85%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -76,12 +76,12 @@
   padding: 1rem 0;
 }
 
-.gallery{
+.gallery {
   position: relative !important;
   border-radius: 10px;
 }
 
-.button-and-tag-container{
+.button-and-tag-container {
   background-color: #000000a0;
   position: absolute;
   z-index: 999;
@@ -96,7 +96,7 @@
 .button {
   width: 35%;
   height: fit-content;
-  padding:0.5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   display: flex;
   column-gap: 1rem;
@@ -113,7 +113,7 @@
   flex-wrap: wrap;
 }
 
-.button-and-tag-container .tags span{
+.button-and-tag-container .tags span {
   font-size: 0.8rem;
   font-weight: bold;
   color: #fff;
@@ -124,14 +124,13 @@
   transition: background-color 500ms ease-in-out;
 }
 
-.button-and-tag-container .tags span:not(:first-child){
+.button-and-tag-container .tags span:not(:first-child) {
   margin-left: 0.5rem;
 }
 
-.button-and-tag-container .tags span:hover{
+.button-and-tag-container .tags span:hover {
   background-color: var(--hover_color);
 }
-
 
 .button a {
   width: auto;
@@ -151,37 +150,31 @@
   background-color: var(--hover_color);
 }
 
-@media (max-width: 768px){
-  .projects{
-    width: 98%;
+@media (max-width: 1024px) {
+  .projects {
+    width: 95%;
   }
 }
-
 
 @media screen and (max-width: 600px) {
-    .project_page {
-    overflow: hidden;
+  .gallery {
+    width: 100%;
   }
 
-  .gallery{
-  min-width: 98vw !important;
-
+  .button-and-tag-container {
+    width: 100%;
   }
 
-.button-and-tag-container{
-  width: 100%;
-}
+  .button-and-tag-container .tags span {
+    font-size: 0.6rem;
+    font-weight: normal;
+  }
 
-.button-and-tag-container .tags span{
-    font-size: 0.3rem;
-  font-weight: normal;
-}
+  .button-and-tag-container .tags span:not(:first-child) {
+    margin-left: 0.4rem;
+  }
 
-.button-and-tag-container .tags span:not(:first-child){
-  margin-left: 0.4rem;
-}
-
-  .button a{
+  .button a {
     padding: 0.5rem;
     font-size: 0.5rem;
   }
