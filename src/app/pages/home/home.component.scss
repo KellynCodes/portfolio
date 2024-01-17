@@ -18,8 +18,8 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  top: 63%;
-  left: 35%;
+  top: 58%;
+  left: 32%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +111,7 @@
 }
 
 .home .about .my_work {
-  width: 99%;
+  width: 100%;
   height: fit-content;
   display: flex;
   align-items: center;
@@ -119,7 +119,7 @@
 }
 
 .home .about .my_work ul {
-  width: 70%;
+  width: 80%;
   height: 12rem;
   display: flex;
   align-items: center;
@@ -168,6 +168,10 @@
   .home::before {
     z-index: 1000;
   }
+
+    .home .about .my_work ul {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -178,8 +182,9 @@
   }
 
   .home::before {
-    left: 47%;
-    top: 75vh;
+    left: unset;
+    right: 20%;
+    top: 55%;
   }
 
   .home::after {
@@ -188,14 +193,16 @@
 
   .home .home_left {
     padding: 0;
+    width: 95%;
+    margin: 0 auto;
   }
 
   .home .home_right {
-    padding-top: 7rem;
+   display: none;
   }
 
-  .home .about {
-    width: 100%;
+  .home .home_left .about {
+    width: 88%;
     padding-left: 0.1rem;
   }
 
@@ -203,9 +210,11 @@
     font-size: 1.5rem;
   }
 
-  .home .about .my_work ul {
-    width: 90%;
+  .home .about .my_work {
+  justify-content: center;
   }
+  
+
 }
 
 @media screen and (max-width: 600px) {
@@ -216,13 +225,17 @@
     margin: 0;
   }
 
-  .home::before {
-    display: none;
-  }
-
   .home .home_left {
     width: 100%;
   }
+
+  
+  .home::before {
+    left: unset;
+    right: 0%;
+    top: 55%;
+  }
+
 
   .home .home_left .about {
     width: 88%;
@@ -236,11 +249,6 @@
   .home .about .software_engineer h1 {
     font-size: 1.5rem;
     font-weight: 600;
-  }
-
-  .home .home_right {
-    width: 100%;
-    padding-left: 1.3rem;
   }
 
   .home .about .my_work ul .icons {

@@ -75,10 +75,29 @@
   line-height: 1.5rem;
 }
 
+  .resume .profile {
+    width: 90%;
+    margin: auto;
+    margin-top: 1.2rem;
+  }
+
+  .resume .profile ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+  }
+  
+  .resume .profile ul li{
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
 span,
 li {
   color: var(--white_color);
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .resume a {
@@ -101,12 +120,17 @@ li {
 }
 
 .resume .skills {
+  width: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2px;
-  margin-top: -2rem;
+  justify-content:center;
+  gap: 2rem;
+}
+
+.resume .skills div:not(:last-child){
+width: 45%;
 }
 
 .resume #wrapper_hero {
@@ -166,7 +190,7 @@ li {
   column-gap: 1em;
   flex-wrap: wrap;
   width: 80%;
-  margin: auto;
+  margin: 1.4rem auto;
   background-color: var(--white_color);
   border-radius: 4px;
 }
@@ -181,53 +205,50 @@ li {
 .resume #socials_list a:hover {
   text-decoration: underline;
 }
-.resume .qualification_list {
+
+
+.qualification_list, .programming_languages {
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
+  gap: 1rem;
   list-style-type: circle;
   justify-content: space-evenly;
   align-items: center;
-  width: 15rem;
+  width: 100%;
+  padding: 0.5rem;
   border: 2px solid var(--main_color);
   border-radius: 4px;
   margin: 1rem 0;
+}
+
+.qualification_list, .programming_languages li{
+  margin: 1rem 1.3rem;
 }
 
 .section_page .tech_stack {
   margin-bottom: 1rem;
 }
 
-.skills div .skill {
-  width: 28rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  place-content: center;
+.soft_skill .skill ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: circle;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
   border: 2px solid var(--main_color);
   border-radius: 4px;
+  margin: 1rem 0;
 }
 
-@media screen and (min-width: 1100px) {
-  .skills > div h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  .skills div .skill > ul {
-    width: 28rem;
-    display: grid;
-    grid-row-gap: 0.5rem;
-    grid-column-gap: 2rem;
-    list-style-type: circle !important;
-    grid-template-columns: 1fr 1fr;
-    line-height: 1.5rem;
-    overflow-x: hidden;
-    padding-left: 2rem;
-  }
-  .skills .soft_skill {
-    margin-top: 4rem;
-  }
+.soft_skill .skill ul li{
+  margin: 1rem 1.3rem;
 }
+
 .resume #wrapper_techstack_items {
   display: flex;
   flex-wrap: wrap;
@@ -269,12 +290,6 @@ li {
   padding: 1rem;
 }
 
-@media screen and (max-width: 1100px) {
-  .about_container .about {
-    width: 98%;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .about {
     width: 100%;
@@ -301,17 +316,9 @@ li {
     margin-top: 0;
   }
 
-  .skills div .skill > ul {
-    width: 15rem;
-    display: grid;
-    place-content: center;
-    list-style-type: circle;
-  }
-  .skills div .skill {
-    width: 15rem;
-    display: grid;
-    margin-top: 1rem;
-  }
+  .resume .skills div:not(:last-child){
+width: 100%;
+}
 
   .skills > div h2 {
     font-size: 1.2rem;
@@ -352,11 +359,6 @@ li {
     font-size: 2rem;
   }
 
-  .resume .profile {
-    width: 90%;
-    margin: auto;
-    margin-top: 1.2rem;
-  }
 
   .resume #socials_list {
     width: 100%;
