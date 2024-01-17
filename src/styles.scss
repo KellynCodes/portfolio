@@ -1,12 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
-
 @import "../node_modules/@angular/cdk/overlay-prebuilt.css";
-@import url("http://fonts.cdnfonts.com/css/proxima-nova-2");
-
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
 
 *,
 *::before,
@@ -24,11 +16,10 @@
   --background_color: #2f5061;
   --border_color: #e9dede;
   --font_Sofia: "Sofia", sans-serif;
-  --font_Proxima-Nova: "Proxima Nova", sans-serif;
-}
 
 body {
-  font-family: var(--font_Proxima-Nova);
+  font-family: "Inter", sans-serif;
+};
   overflow-x: hidden;
   color: white !important;
   background-color: var(--background_color);
