@@ -1,5 +1,3 @@
-@import "../node_modules/@angular/cdk/overlay-prebuilt.css";
-
 *,
 *::before,
 *::after {
@@ -19,6 +17,7 @@
   --border_color: #e9dede;
   --font_Sofia: "Sofia", sans-serif;
 }
+
 body {
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
@@ -61,4 +60,34 @@ body {
 
 .shadow {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slick-dots li button::before {
+  content: "";
+  font-size: 10px !important;
+}
+
+.slick-dots li:hover button::before {
+  font-size: 20px !important;
+  color: #ef4444cd !important;
+}
+
+.slick-dots .slick-active button::before {
+  font-size: 20px !important;
+  color: #ef4444cd !important;
+  color: transparent;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  background-color: #fff !important;
+  color: #ef4444cd !important;
+  border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+  .slick-prev::before,
+  .slick-next::before {
+    display: none !important;
+  }
 }

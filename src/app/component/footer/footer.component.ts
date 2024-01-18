@@ -52,7 +52,6 @@ export class FooterComponent {
       const isWindowScroll =
         window.innerWidth > 700 && window.innerHeight > 200;
       this.windowScroll.set(isWindowScroll);
-      console.log(isWindowScroll);
     }
   }
 
@@ -62,7 +61,6 @@ export class FooterComponent {
       const isWindowScroll =
         window.innerWidth > 700 && window.innerHeight > 200;
       this.windowScroll.set(isWindowScroll);
-      console.log(isWindowScroll);
     }
   }
 }

@@ -188,7 +188,7 @@ span {
   height: 150px;
   margin-right: 1.2rem;
   object-fit: cover;
-  border: 3px solid var(--accent_color);
+  border: 3px solid var(--white_color);
 }
 
 .resume #wrapper_hero div {
@@ -219,17 +219,27 @@ span {
 }
 
 .resume #socials_list a {
+  position: relative;
   font-size: 1em;
   font-weight: bold;
   transition: 600ms;
-  color: var(--white_color);
-  background-color: var(--accent_color);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  color: var(--main_color);
 }
 
-.resume #socials_list a:hover {
-  text-decoration: underline;
+.resume #socials_list a::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: var(--accent_color);
+  width: 0%;
+  height: 2px;
+  transition: all 500ms ease-in-out;
+}
+
+.resume #socials_list a:hover::after {
+  width: 80%;
 }
 
 .qualification_list,
@@ -279,6 +289,7 @@ span {
 }
 
 .soft_skill .skill ul li {
+  margin-left: 1.3rem;
   color: var(--accent_color);
 }
 
@@ -366,10 +377,6 @@ span {
     font-size: 1rem;
   }
 
-  .soft_skill .skill ul {
-    justify-content: flex-start;
-  }
-
   .resume .skills {
     margin-top: 0;
   }
@@ -407,13 +414,6 @@ span {
   .resume #socials_list {
     width: 100%;
   }
-
-  .resume #socials_list a {
-    text-decoration: underline;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .resume #username {
     font-size: 1.5rem !important;
     text-align: center;
@@ -421,5 +421,10 @@ span {
 
   .resume #email {
     font-size: 0.6rem;
+  }
+}
+@media screen and (max-width: 380px) {
+  .soft_skill .skill ul {
+    justify-content: flex-start;
   }
 }

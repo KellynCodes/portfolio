@@ -75,7 +75,7 @@
 }
 
 .navbar .navlinks .links #sm {
-  background-color: #ed5d66;
+  background-color: var(--background_color);
   padding: 0.4rem 0.5rem;
   width: auto;
   height: auto;
@@ -83,19 +83,31 @@
 }
 
 .navbar .navlinks .links a {
+  position: relative;
   font-size: 1rem;
   text-decoration: none;
   font-weight: 700;
   color: var(--black_color);
   width: auto;
   height: auto;
-  border-bottom: 0px solid var(--main_color);
   padding: 0.3rem;
-  transition: all 400ms ease-in-out;
 }
 
-.navbar .navlinks li:hover #lg {
-  border-bottom: 4px solid var(--accent_color);
+.navbar .navlinks .links a::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: var(--accent_color);
+  width: 0%;
+  height: 2px;
+  margin-left: 0.3rem;
+  transition: all 500ms ease-in-out;
+}
+
+.navbar .navlinks .links a:hover::after {
+  width: 80%;
 }
 
 .navbar .navlinks li.active #lg {

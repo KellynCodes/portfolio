@@ -4,53 +4,55 @@
   </div>
   <div class="projects">
     @defer {
-    <gallery
-      class="gallery"
-      id="PROJECT_GALLERY"
-      imageSize="cover"
-      [autoPlay]="true"
-      [playerInterval]="5000"
+    <ngx-slick-carousel
+      class="slick_wrapper"
+      #slickModal="slick-carousel"
+      [config]="sliderConfig"
     >
-      <ng-container
-        *galleryImageDef="let item; let active = active; let type = type"
-      >
-        <div *ngIf="active" class="project_desc shadow">
-          <p>
-            {{ item?.alt }}
-          </p>
-        </div>
-        <div class="button-and-tag-container shadow">
-          <div class="tags">
-            @for (tag of item?.args?.tags; track $index) {
-            <span class=""># {{ tag }}</span>
-            }
+      @for (project of projects(); track project.id) {
+      <div ngxSlickItem class="slick_slide">
+        <a
+          href="{{ project.liveLink }}"
+          target="_blank"
+          class="img-bg"
+          style="background-image: url('{{ project.image }}')"
+        >
+          <div class="img-bg-inner">
+            <h2>
+              {{ project.title }}
+            </h2>
+            <p>
+              {{ project.description }}
+            </p>
           </div>
-          <div class="button">
-            <a
-              href="{{ item?.args?.githubLink }}"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ng-icon color="#fff" size="3em" name="faBrandGithub" />
-            </a>
-            <a
-              href="{{ item?.args?.liveLink }}"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <ng-icon color="#fff" size="3em" name="faSolidLink" />
-            </a>
-          </div>
-        </div>
-        <div>
-          <a href="{{ item?.args?.liveLink }}">
-            <div *ngIf="type === 'image'">
-              <img [src]="item?.src" />
+          <div class="button-and-tag-container shadow">
+            <div class="tags">
+              @for (tag of project.tags; track $index) {
+              <span class=""># {{ tag }}</span>
+              }
             </div>
-          </a>
-        </div>
-      </ng-container>
-    </gallery>
+            <div class="button">
+              <a
+                href="{{ project.githubLink }}"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ng-icon color="#fff" size="3em" name="faBrandGithub" />
+              </a>
+              <a
+                href="{{ project?.liveLink }}"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <ng-icon color="#fff" size="3em" name="faSolidLink" />
+              </a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      }
+    </ngx-slick-carousel>
     }@loading(minimum 500ms) {
     <blog-loader loadingText="Loading Project Gallery..." />
     }@error {

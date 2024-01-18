@@ -1,28 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  Gallery,
-  GalleryItem,
-  GalleryModule,
-  GalleryRef,
-  ImageItem,
-} from 'ng-gallery';
 import { RouterLink } from '@angular/router';
 import { ProjectDto, Projects } from '../../data/projects';
 import { faSolidLink } from '@ng-icons/font-awesome/solid';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { faBrandGithub } from '@ng-icons/font-awesome/brands';
 import { LoaderComponent } from '../../component/loader/loader.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'kelly-projects',
   standalone: true,
   imports: [
-    GalleryModule,
     CommonModule,
     RouterLink,
     NgIconComponent,
     LoaderComponent,
+    SlickCarouselModule,
   ],
   viewProviders: [
     provideIcons({
@@ -33,33 +27,17 @@ import { LoaderComponent } from '../../component/loader/loader.component';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent implements OnInit {
-  galleryId = 'PROJECT_GALLERY';
-  public projects: ProjectDto[] = Projects;
-  // server: string = 'https://kellyncodesolution.onrender.com';
-
-  images: GalleryItem[] = [];
-
-  constructor(private gallery: Gallery) {}
-
-  ngOnInit() {
-    const galleryRef: GalleryRef = this.gallery.ref(this.galleryId);
-    // Set items array
-    this.projects.map((project) => {
-      this.images.push(
-        new ImageItem({
-          src: project.image,
-          thumb: project.image,
-          alt: project.description,
-          args: {
-            githubLink: project.githubLink,
-            liveLink: project.liveLink,
-            tags: project.tags,
-          },
-        })
-      );
-    });
-
-    galleryRef.load(this.images);
-  }
+export class ProjectsComponent {
+  public projects = signal<ProjectDto[]>(Projects);
+  sliderConfig = {
+    dots: true,
+    draggable: true,
+    infinite: false,
+    speed: 1500,
+    autoplay: true,
+    autoplaySpeed: 3500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+  };
 }
