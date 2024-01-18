@@ -3,6 +3,7 @@
     <h1>MY PROJECTS</h1>
   </div>
   <div class="projects">
+    @defer {
     <gallery
       class="gallery"
       id="PROJECT_GALLERY"
@@ -10,7 +11,9 @@
       [autoPlay]="true"
       [playerInterval]="5000"
     >
-      <ng-container *galleryImageDef="let item; let active = active">
+      <ng-container
+        *galleryImageDef="let item; let active = active; let type = type"
+      >
         <div *ngIf="active" class="project_desc shadow">
           <p>
             {{ item?.alt }}
@@ -39,19 +42,19 @@
             </a>
           </div>
         </div>
+        <div>
+          <a href="{{ item?.args?.liveLink }}">
+            <div *ngIf="type === 'image'">
+              <img [src]="item?.src" />
+            </div>
+          </a>
+        </div>
       </ng-container>
-      <div *galleryItemDef="let item; let type = type">
-        <a href="{{ item?.args?.liveLink }}">
-          <div *ngIf="type === 'image'">
-            <img [src]="item?.src" />
-          </div>
-          <div *ngIf="type === 'video'">
-            <video>
-              <source [src]="item?.src" />
-            </video>
-          </div>
-        </a>
-      </div>
     </gallery>
+    }@loading(minimum 500ms) {
+    <blog-loader loadingText="Loading Project Gallery..." />
+    }@error {
+    <p class="text-red-500 font-bold bg-white z-50">Failed to load projects</p>
+    }
   </div>
 </div>

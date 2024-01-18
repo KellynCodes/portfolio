@@ -12,11 +12,18 @@ import { ProjectDto, Projects } from '../../data/projects';
 import { faSolidLink } from '@ng-icons/font-awesome/solid';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { faBrandGithub } from '@ng-icons/font-awesome/brands';
+import { LoaderComponent } from '../../component/loader/loader.component';
 
 @Component({
   selector: 'kelly-projects',
   standalone: true,
-  imports: [GalleryModule, CommonModule, RouterLink, NgIconComponent],
+  imports: [
+    GalleryModule,
+    CommonModule,
+    RouterLink,
+    NgIconComponent,
+    LoaderComponent,
+  ],
   viewProviders: [
     provideIcons({
       faSolidLink,

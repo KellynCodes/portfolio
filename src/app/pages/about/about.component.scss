@@ -89,12 +89,16 @@
 }
 
 .resume .profile ul li {
+  color: var(--accent_color);
+}
+
+.resume .profile ul li p {
+  color: var(--white_color);
   font-weight: 500;
   margin-top: 1rem;
 }
 
-span,
-li {
+span {
   color: var(--white_color);
   font-size: 1rem;
 }
@@ -141,10 +145,6 @@ li {
 }
 
 @media (max-width: 600px) {
-  .resume #wrapper_hero {
-    justify-content: space-between;
-  }
-
   .resume .skills div:not(:last-child) {
     width: 100%;
   }
@@ -167,11 +167,15 @@ li {
   text-decoration: underline;
 }
 
+.resume #bio {
+  font-size: 1.5rem;
+}
 .resume #bio,
 #email {
   font-weight: 600 !important;
   color: var(--main_color);
-  margin-bottom: 0.4rem;
+  margin: 0.4rem 0;
+  text-align: start;
 }
 
 .resume a {
@@ -184,15 +188,15 @@ li {
   height: 150px;
   margin-right: 1.2rem;
   object-fit: cover;
-  border: 3px solid var(--black_color);
+  border: 3px solid var(--accent_color);
 }
 
 .resume #wrapper_hero div {
-  width: fit-content;
+  width: auto;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -205,19 +209,22 @@ li {
 .resume #socials_list {
   display: flex;
   justify-content: space-evenly;
-  column-gap: 1em;
+  gap: 1rem;
   flex-wrap: wrap;
   width: 80%;
   margin: 1.4rem auto;
   background-color: var(--white_color);
   border-radius: 4px;
+  padding: 0 0.3rem;
 }
 
 .resume #socials_list a {
   font-size: 1em;
   font-weight: bold;
   transition: 600ms;
-  color: var(--main_color);
+  color: var(--white_color);
+  background-color: var(--accent_color);
+  padding: 0.2rem 0.5rem;
 }
 
 .resume #socials_list a:hover {
@@ -228,14 +235,23 @@ li {
 .programming_language {
   display: flex;
   flex-wrap: wrap;
-  list-style-type: circle;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
   border: 2px solid var(--main_color);
   border-radius: 4px;
   margin: 1rem 0;
+}
+
+.qualification_list li,
+.programming_language li {
+  color: var(--accent_color);
+}
+
+.qualification_list li p,
+.programming_language li p {
+  color: var(--white_color);
+  margin: 0.5rem 1.3rem;
 }
 
 .section_page .tech_stack {
@@ -250,19 +266,23 @@ li {
 .soft_skill .skill ul {
   display: flex;
   flex-wrap: wrap;
-  list-style-type: circle;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
   height: auto;
-  padding: 0 0.5rem;
+  padding: 0 0.8rem;
   border: 2px solid var(--main_color);
   border-radius: 4px;
   margin: 0.5rem auto;
 }
 
 .soft_skill .skill ul li {
+  color: var(--accent_color);
+}
+
+.soft_skill .skill ul li p {
+  color: var(--white_color);
   margin: 0.5rem 1.3rem;
 }
 
@@ -343,11 +363,6 @@ li {
   }
   .about_container .about .skills_container h1 {
     font-size: 1rem;
-  }
-
-  .resume #profile_pic {
-    width: 100px;
-    height: 100px;
   }
 
   .soft_skill .skill ul {
