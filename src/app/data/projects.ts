@@ -1,7 +1,7 @@
 export const Projects: ProjectDto[] = [
   {
     id: 1,
-    title: 'Unizike Hostel Management System',
+    title: 'Unizik Hostel Management System',
     tags: ['Blazor', '.NET', 'Asp.Net Core', 'AWS', 'Gitlab', 'CI/CD'],
     description:
       'This system help students to rent/book for their apartment and as well provides automated rent payment and reminder.',
