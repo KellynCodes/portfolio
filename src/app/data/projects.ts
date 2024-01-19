@@ -5,13 +5,30 @@ export const Projects: ProjectDto[] = [
     tags: ['Blazor', '.NET', 'Asp.Net Core', 'AWS', 'Gitlab', 'CI/CD'],
     description:
       'This system help students to rent/book for their apartment and as well provides automated rent payment and reminder.',
-    githubLink: 'https://elmadaunizikhostels.com/',
     liveLink: 'https://elmadaunizikhostels.com/',
     image: 'assets/projects/emaldaunizik.jpg',
   },
-
   {
     id: 2,
+    title: 'Welcome to University of Nigeria Portal',
+    tags: ['.NET', 'Asp.Net Core', 'AWS', 'Azure', 'GitHub', 'CI/CD'],
+    description:
+      'Step through the virtual doors of our Portal - Your Gateway to Knowledge, Excellence, and Limitless Possibilities!',
+    liveLink: 'https://unnportal.unn.edu.ng',
+    image: 'assets/projects/unn.PNG',
+  },
+  {
+    id: 3,
+    title: 'Welcome to Federal University of Technology Portal',
+    tags: ['.NET', 'Asp.Net Core', 'AWS', 'Azure', 'GitHub', 'CI/CD'],
+    description:
+      'Experience the best education with our diverse programs and ample learning resources. Explore more below.',
+    liveLink: 'https://portal.futo.edu.ng',
+    image: 'assets/projects/futo.PNG',
+  },
+
+  {
+    id: 4,
     title: 'Blogging Site | Angular & API from dummyapi.io.',
     tags: [
       'Angular',
@@ -30,7 +47,7 @@ export const Projects: ProjectDto[] = [
   },
 
   {
-    id: 3,
+    id: 5,
     title: 'Web5 Hackathon | NextJs & TBD',
     tags: [
       'Next.Js',
@@ -48,7 +65,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/web5-hackathon.PNG',
   },
   {
-    id: 4,
+    id: 6,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -64,7 +81,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/specializedorthopedic.PNG',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -80,7 +97,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/sobol.PNG',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -102,7 +119,7 @@ export interface ProjectDto {
   tags: Array<string>;
   title: string;
   description: string;
-  githubLink: string;
+  githubLink?: string;
   liveLink: string;
   image: string;
 }

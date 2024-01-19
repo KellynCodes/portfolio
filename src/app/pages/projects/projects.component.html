@@ -33,6 +33,7 @@
             </div>
             <div class="button">
               <a
+                *ngIf="project.githubLink"
                 href="{{ project.githubLink }}"
                 target="_blank"
                 rel="noreferrer"

@@ -226,6 +226,18 @@ span {
   color: var(--main_color);
 }
 
+@media (max-width: 800px) {
+  .resume #socials_list {
+    width: 98%;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume #socials_list a:is(:last-child) {
+    display: none;
+  }
+}
+
 .resume #socials_list a::after {
   position: absolute;
   left: 0;
