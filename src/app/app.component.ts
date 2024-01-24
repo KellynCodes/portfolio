@@ -25,7 +25,7 @@ import { PreloaderComponent } from './component/preloader/preloader.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   isPageLoading = signal<boolean>(true);
   constructor() {
     afterRender(() => {
@@ -36,9 +36,6 @@ export class AppComponent implements AfterViewInit {
         mirror: true,
       });
     });
-  }
-  ngAfterViewInit(): void {
-    this.isPageLoading.set(false);
   }
 
   ngOnInit(): void {}

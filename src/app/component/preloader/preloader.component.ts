@@ -1,4 +1,10 @@
-import { Component, Input, booleanAttribute } from '@angular/core';
+import {
+  AfterRenderPhase,
+  Component,
+  ElementRef,
+  afterRender,
+} from '@angular/core';
+import { BrowserApiService } from '../../services/shared/browser.api.service';
 
 @Component({
   selector: 'kelly-preloader',
@@ -7,4 +13,17 @@ import { Component, Input, booleanAttribute } from '@angular/core';
   templateUrl: './preloader.component.html',
   styleUrl: './preloader.component.scss',
 })
-export class PreloaderComponent {}
+export class PreloaderComponent {
+  constructor(
+    private elementRef: ElementRef,
+    private browserApiService: BrowserApiService
+  ) {
+    if (this.browserApiService.isBrowser) {
+      const preloader: HTMLDivElement =
+        this.elementRef.nativeElement.querySelector('.preloader_container');
+      window.addEventListener('load', () => {
+        preloader.style.display = 'none';
+      });
+    }
+  }
+}
