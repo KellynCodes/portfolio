@@ -41,8 +41,8 @@ export const Projects: ProjectDto[] = [
     ],
     description:
       'In this project I demonstrated my skill working with api and managing application state asynchronously with with ngrx and rxjs',
-    githubLink: 'https://github.com/KellynCodes/stackbuild-blog-site',
-    liveLink: 'http://stackbuild-blog-site.vercel.app',
+    githubLink: 'https://github.com/KellynCodes/zenblog',
+    liveLink: 'http://zendblog.vercel.app',
     image: '../../assets/projects/zen-blog.PNG',
   },
 
@@ -77,7 +77,7 @@ export const Projects: ProjectDto[] = [
     description:
       'Orthopedic Website Landing Page, styled with tailwindCss and with contact and appointment forms.',
     githubLink: 'https://github.com/KellynCodes/sosinc',
-    liveLink: 'http://specializedorthosurgeons.com',
+    liveLink: 'http://sosinc.vercel.app',
     image: '../../assets/projects/specializedorthopedic.PNG',
   },
   {
@@ -93,7 +93,7 @@ export const Projects: ProjectDto[] = [
     description:
       'Orthopedic Website Landing Page, styled with tailwindCss and with contact and appointment forms.',
     githubLink: 'https://github.com/KellynCodes/sobol-orthopedic',
-    liveLink: 'https://sobolorthomed.com',
+    liveLink: 'https://sobol-orthopedic.netlify.app/',
     image: '../../assets/projects/sobol.PNG',
   },
   {
@@ -109,7 +109,7 @@ export const Projects: ProjectDto[] = [
     description:
       'Orthopedic Website Landing Page, styled with tailwindCss and with contact and appointment forms.',
     githubLink: 'https://github.com/KellynCodes/optimal-orthopedic',
-    liveLink: 'https://optimalorthomed.com',
+    liveLink: 'https://optimal-orthorpedic.netlify.app',
     image: '../../assets/projects/optimalorthopedic.PNG',
   },
 ];
