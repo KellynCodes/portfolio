@@ -32,12 +32,14 @@ export class ProjectsComponent {
   sliderConfig = {
     dots: true,
     draggable: true,
-    infinite: false,
+    infinite: true,
     speed: 1500,
     autoplay: true,
     autoplaySpeed: 3500,
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
+    pauseOnDotsHover: true,
+    pauseOnHover: false,
   };
 }

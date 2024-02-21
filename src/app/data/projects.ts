@@ -45,9 +45,26 @@ export const Projects: ProjectDto[] = [
     liveLink: 'http://zendblog.vercel.app',
     image: '../../assets/projects/zen-blog.PNG',
   },
-
   {
     id: 5,
+    title: 'Portfolio Website for a graphic designer.',
+    tags: [
+      'Angular',
+      'ng-gallery',
+      'light-box',
+      'Bootstrap',
+      'Github',
+      'Vercel',
+    ],
+    description:
+      'An interactive portfolio website for a professional graphics designer.',
+    githubLink: 'https://github.com/KellynCodes/andy-portfolio',
+    liveLink: 'http://andy-graphics.vercel.app',
+    image: '../../assets/projects/andy-portfolio.png',
+  },
+
+  {
+    id: 6,
     title: 'Web5 Hackathon | NextJs & TBD',
     tags: [
       'Next.Js',
@@ -65,7 +82,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/web5-hackathon.PNG',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -81,7 +98,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/specializedorthopedic.PNG',
   },
   {
-    id: 6,
+    id: 8,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -97,7 +114,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/sobol.PNG',
   },
   {
-    id: 7,
+    id: 9,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
