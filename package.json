@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "serve:ssr": "nodemon node dist/kellyncodes/server/server.mjs",
     "test": "ng test"
@@ -33,6 +34,7 @@
     "ng-gallery": "^11.0.0",
     "ngx-slick-carousel": "^17.0.0",
     "ngx-toastr": "^18.0.0",
+    "nodemon": "^3.1.4",
     "rxjs": "~7.8.0",
     "slick-carousel": "^1.8.1",
     "tslib": "^2.3.0",

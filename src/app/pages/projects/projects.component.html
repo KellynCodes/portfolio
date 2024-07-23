@@ -4,19 +4,11 @@
   </div>
   <div class="projects">
     @defer {
-    <ngx-slick-carousel
-      class="slick_wrapper"
-      #slickModal="slick-carousel"
-      [config]="sliderConfig"
-    >
+    <ngx-slick-carousel class="slick_wrapper" #slickModal="slick-carousel" [config]="sliderConfig">
       @for (project of projects(); track project.id) {
       <div ngxSlickItem class="slick_slide">
-        <a
-          href="{{ project.liveLink }}"
-          target="_blank"
-          class="img-bg"
-          style="background-image: url('{{ project.image }}')"
-        >
+        <a href="{{ project.liveLink }}" target="_blank" class="img-bg"
+          style="background-image: url('{{ project.image }}')">
           <div class="img-bg-inner">
             <h2>
               {{ project.title }}
@@ -32,19 +24,10 @@
               }
             </div>
             <div class="button">
-              <a
-                *ngIf="project.githubLink"
-                href="{{ project.githubLink }}"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a *ngIf="project.githubLink" href="{{ project.githubLink }}" target="_blank" rel="noreferrer">
                 <ng-icon color="#fff" size="3em" name="faBrandGithub" />
               </a>
-              <a
-                href="{{ project?.liveLink }}"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="{{ project?.liveLink }}" target="_blank" rel="noreferrer">
                 <ng-icon color="#fff" size="3em" name="faSolidLink" />
               </a>
             </div>
@@ -55,7 +38,7 @@
       }
     </ngx-slick-carousel>
     }@loading(minimum 500ms) {
-    <blog-loader loadingText="Loading Project Gallery..." />
+    <kelly-loader loadingText="Loading Project Gallery..." />
     }@error {
     <p class="text-red-500 font-bold bg-white z-50">Failed to load projects</p>
     }

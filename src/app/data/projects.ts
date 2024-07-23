@@ -29,6 +29,16 @@ export const Projects: ProjectDto[] = [
 
   {
     id: 4,
+    title: 'Infinite graphics and video design on demand.',
+    tags: ['NextJs', 'SEO', 'Vercel', 'GitHub'],
+    description:
+      'Elevate your business with unlimited eye-catching graphics, captivating videos, and engaging email designs tailored specifically for your brand.',
+    liveLink: 'https://www.vortex-biz.com',
+    image: 'assets/projects/vortex.PNG',
+  },
+
+  {
+    id: 6,
     title: 'Blogging Site | Angular & API from dummyapi.io.',
     tags: [
       'Angular',
@@ -46,7 +56,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/zen-blog.PNG',
   },
   {
-    id: 5,
+    id: 7,
     title: 'Portfolio Website for a graphic designer.',
     tags: [
       'Angular',
@@ -64,25 +74,7 @@ export const Projects: ProjectDto[] = [
   },
 
   {
-    id: 6,
-    title: 'Web5 Hackathon | NextJs & TBD',
-    tags: [
-      'Next.Js',
-      'Web5',
-      'TBD',
-      'TailwindCSS',
-      'Vanilla Css',
-      'Github',
-      'Vercel',
-    ],
-    description:
-      'This project leverages the power of web2 and web5 to create 100% decentralized application where users owen and manage their data.',
-    githubLink: 'https://github.com/KellynCodes/OmniVerse',
-    liveLink: 'https://omniverze.vercel.app',
-    image: '../../assets/projects/web5-hackathon.PNG',
-  },
-  {
-    id: 7,
+    id: 8,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -98,7 +90,7 @@ export const Projects: ProjectDto[] = [
     image: '../../assets/projects/specializedorthopedic.PNG',
   },
   {
-    id: 8,
+    id: 7,
     title: 'Orthopedic Website | Angular',
     tags: [
       'Angular',
@@ -112,22 +104,6 @@ export const Projects: ProjectDto[] = [
     githubLink: 'https://github.com/KellynCodes/sobol-orthopedic',
     liveLink: 'https://sobol-orthopedic.netlify.app/',
     image: '../../assets/projects/sobol.PNG',
-  },
-  {
-    id: 9,
-    title: 'Orthopedic Website | Angular',
-    tags: [
-      'Angular',
-      'Hospital Landing page',
-      'TailwindCss',
-      'EmailJS',
-      'Hostinger',
-    ],
-    description:
-      'Orthopedic Website Landing Page, styled with tailwindCss and with contact and appointment forms.',
-    githubLink: 'https://github.com/KellynCodes/optimal-orthopedic',
-    liveLink: 'https://optimal-orthorpedic.netlify.app',
-    image: '../../assets/projects/optimalorthopedic.PNG',
   },
 ];
 
