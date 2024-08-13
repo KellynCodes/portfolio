@@ -1,11 +1,11 @@
 {
   "hosting": {
-    "public": "dist/kellyncodes/server/",
+    "public": "dist/kellyncodes/browser",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.server.html"
+        "destination": "/index.html"
       }
     ]
   }
